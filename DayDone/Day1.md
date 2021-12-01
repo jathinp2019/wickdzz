@@ -12,4 +12,4 @@ Task list :
   - [ ] CALENDAR
 
 ### ACCM: 
-- Made a calendar design, need to start implementing that
+- Made a calendar design, need to start implementing that  

@@ -9,10 +9,12 @@ Task list :
 A slow start ... but will doo better
 
 - [x] JAVA (not very thoroughly)
-- [ ] WEBDEV <span style="font-size:10px">(daily practice)</span>
+- [x] WEBDEV <span style="font-size:10px">(daily practice)</span>
   - CALENDAR
 
 ### ACCM: 
-- Made a calendar design, need to start implementing that  
 - tried learning JAVA...slow start but will cope up
 - thought of procrastinating again ... need to come put of it
+  
+- Made a calendar design, need to start implementing that  
+- Implemented 60% of the calendar

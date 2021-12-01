@@ -49,7 +49,8 @@ icon.forEach((ic) => {
 
 const d = new Date();
 day.innerText = calDay[d.getDay()];
-date.innerText = d.getDate() + " / " + d.getMonth();
+let dt = d.getDate() < 10 ? "0" + d.getDate() : d.getDate();
+date.innerText = dt + " / " + (d.getMonth() + 1);
 
 function showTime() {
   var date = new Date();

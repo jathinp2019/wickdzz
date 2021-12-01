@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;600&family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  --orange: #f9813a;
+  --black: #1a1c20;
+  --white: #f7f7f7;
+
+  --fs-ubig: 5rem;
+  --fs-big: 3rem;
+  --fs-med: 2rem;
+  --fs-small: 1.3rem;
+
+  --ff-mp: "M PLUS 1 Code", sans-serif;
+  --ff-pp: "Poppins", sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+body {
+  position: relative;
+
+  /* width: 200vw; */
+  height: 100vh;
+  overflow-y: hidden;
+  transition: all 2s linear ease-in;
+}
+.ff-mp {
+  font-family: var(--ff-mp);
+}
+.ff-pp {
+  font-family: var(--ff-pp);
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.fs-ubig {
+  font-size: var(--fs-ubig);
+}
+.fs-big {
+  font-size: var(--fs-big);
+}
+.fs-med {
+  font-size: var(--fs-med);
+}
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.txt-white {
+  color: var(--white);
+}
+.txt-black {
+  color: var(--white);
+}
+.txt-orange {
+  color: var(--white);
+}
+.orange {
+  background-color: var(--orange);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.start {
+  align-items: flex-start;
+}
+.end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.column {
+  flex-direction: column;
+}
+
+.border {
+  border: 2px solid black;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.vw-30 {
+  width: 30vw;
+}
+.vw-70 {
+  width: 70vw;
+}
+/* ------------------------------------------ */
+
+main {
+  position: Relative;
+  height: 100vh;
+  width: 100%;
+  padding-inline: 2rem;
+}
+.bg-img {
+  background-image: url(pics/5.jpg);
+  background-size: cover;
+  object-fit: contain;
+}
+
+.fas {
+  color: #f7f7f7;
+  height: 80px;
+  width: 80px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.time {
+  padding: 2rem 4rem;
+  line-height: 0.7em;
+  font-size: 7rem;
+
+  color: white;
+}
+.timer {
+  -webkit-text-stroke: 2px #1a1c20;
+}
+.date,
+.day {
+  margin-inline: 1.5rem;
+}
+
+.far {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1.5rem;
+}
+.far,
+.fas {
+  cursor: pointer;
+}
+
+/* ------- */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 10px;
+
+  /* margin: 2rem; */
+}
+
+.cal-day {
+  border-top: transparent;
+  font-weight: 400;
+  font-family: var(--ff-mp);
+  font-size: var(--fs-small);
+  color: grey;
+}
+
+.parent .cal-dates {
+  border-top: 2px solid;
+  padding: 1.3rem;
+  width: 100px;
+  height: 70px;
+}
+
+.fa-arrow-circle-left {
+  color: white;
+}
+
+.icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+#left-icon {
+  animation: slide-17 1s infinite alternate;
+}
+@keyframes slide-17 {
+  from {
+    transform: translateX(-2px);
+  }
+  to {
+    transform: translateX(2px);
+  }
+}
+
+#right-icon {
+  animation: slide-14 1s infinite alternate;
+}
+
+@keyframes slide-14 {
+  to {
+    transform: translateX(-2px);
+  }
+}
+
+.r-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+}
+
+.l-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2rem;
+}
+
+.cal-month {
+  padding: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.fa-calendar {
+  margin-inline: 1.5rem;
+  color: black;
+}
+.slider {
+  transition: all 2s ease-in;
+}
+.body-slide-left {
+  transform: translateX(-100vw);
+}
+.body-slide-right {
+  transform: translateX(0);
+}

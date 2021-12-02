@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARALLAX</title>
+
+
+
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;600&family=Poppins:wght@400;500;700&display=swap");
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+
+    }
+
+    .zoom {
+        width: 100%;
+        height: 1000px;
+        position: relative;
+        overflow: hidden;
+        background: url(pics/bg.jpg);
+        background-size: cover;
+    }
+
+    .zoom::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 400px;
+        z-index: 50;
+        background: linear-gradient(transparent, white);
+        background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, transparent);
+    }
+
+    .zoom #layer1 {
+        position: absolute;
+        left: 40%;
+        width: 100%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    .zoom #layer2 {
+        position: absolute;
+        right: 40%;
+        width: 100%;
+        transform: translateX(50%);
+        z-index: 9;
+    }
+
+    .zoom #text {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        transform: translateY(50%);
+    }
+
+    .content {
+        margin: 2rem;
+        padding: 2rem;
+        font-size: 1.8em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    section {
+        height: 100vh;
+    }
+
+    .gallery {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .gallery img {
+        height: 80vh;
+        width: 500px;
+    }
+
+    .gallery h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery h1 span {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .img-slider {
+        height: 80vh;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid red;
+    }
+</style>
+
+<body>
+    <section class="zoom">
+        <img src="pics/mountain1.png" id="layer1">
+        <img src="pics/mountain2.png" id="layer2">
+        <img src="pics/text.png" id="text">
+    </section>
+
+    <section class="content">
+        <h1>PARALLAX</h1>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem placeat autem omnis, ut corrupti
+            molestiae rerum minima veniam numquam perspiciatis ea quo fugiat, quos totam provident, eum voluptas odio
+            quaerat aliquam dolores nihil consequatur. Quod voluptates asperiores pariatur perferendis hic?
+
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi veritatis sint quod vitae quae adipisci
+            suscipit, sit, qui hic deserunt pariatur! Repudiandae numquam rerum blanditiis eius facilis doloribus
+            reiciendis? Ipsam ad incidunt ab commodi in esse voluptatum iure eos modi quas aspernatur, natus iusto illum
+            fugiat earum delectus beatae! Exercitationem!
+        </p>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+        integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var layer1 = document.querySelector('#layer1')
+        var layer2 = document.querySelector('#layer2')
+        var text = document.querySelector('#text')
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".zoom",
+                pin: true,
+                start: "top top",
+                end: "bottom ",
+                scrub: 1,
+            }
+        })
+            .to('#layer1', {
+                x: -150,
+                duration: 1.5,
+            })
+
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".zoom",
+                pin: true,
+                start: "top top",
+                end: "bottom ",
+                scrub: 1,
+            }
+        })
+            .to('#layer2', {
+                x: 1000,
+                duration: 1,
+                // scale: 0.5
+            })
+
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".zoom",
+                pin: true,
+                start: "top top",
+                end: "bottom ",
+                scrub: 1,
+            }
+        })
+            .from('#text', {
+                y: 500,
+                duration: 1,
+            })
+            .to('#text', {
+                y: -120,
+                duration: 1,
+            })
+
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".content",
+                pin: false,
+                start: "top 500",
+                end: "bottom bottom",
+                scrub: 1.5,
+            }
+        })
+            .from('.content h1', {
+                x: -700,
+                duration: 2
+            })
+            .to('.content h1', {
+                x: 0
+            })
+
+
+    </script>
+</body>
+
+</html>

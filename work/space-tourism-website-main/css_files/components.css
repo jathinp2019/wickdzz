@@ -9,6 +9,7 @@
   border-radius: 50%;
   position: relative;
   z-index: 1;
+  font-size: 2rem;
 }
 
 .large-btn:after {

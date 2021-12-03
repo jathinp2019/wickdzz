@@ -73,7 +73,8 @@
   background-color: hsl(var(--clr-white) / 0.25);
 }
 
-.dot-indicators > *:hover {
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
   background-color: hsl(var(--clr-white) / 0.5);
 }
 
@@ -105,3 +106,10 @@
   background-color: hsl(var(--clr-white) / 1);
   color: hsl(var(--clr-dark));
 }
+
+/*
+ .grid-container h1 span {
+  display: block;
+}
+to prevent other letters from coming inline with h1 
+*/

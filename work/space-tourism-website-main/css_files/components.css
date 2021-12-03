@@ -1,0 +1,107 @@
+/* Components */
+
+.large-btn {
+  padding: 0 2em;
+  display: inline-grid;
+  place-items: center;
+  text-decoration: none;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.large-btn:after {
+  content: "";
+  display: inline-block;
+  padding: 0 4em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  background-color: hsl(var(--clr-white) / 0.3);
+  opacity: 0;
+  transition: opacity 400ms linear, transform 500ms ease-in-out;
+}
+.large-btn:hover::after {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.primary-navigation a {
+  text-decoration: none;
+  padding: 0.5em 0;
+  transition: all 300ms;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+.underline-indicators > * {
+  cursor: pointer;
+  padding: var(--underline-gap, 1rem) 0;
+  border: 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(var(--clr-white) / 0.5);
+}
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  /* [] is used to refer attributes */
+  border-color: hsl(var(--clr-white) / 1);
+}
+
+.tab-list {
+  --gap: 2.5rem;
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: hsl(var(--clr-white) / 0.25);
+}
+
+.dot-indicators > *:hover {
+  background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white) / 1);
+}
+
+.number-indicators > * {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  height: 5rem;
+  width: 5rem;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.5em;
+  border: 2px solid;
+  border-color: hsl(var(--clr-white) / 0.25);
+  background-color: transparent;
+  color: white;
+}
+
+.number-indicators > *:hover {
+  border-color: hsl(var(--clr-white) / 0.5);
+}
+
+.number-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark));
+}

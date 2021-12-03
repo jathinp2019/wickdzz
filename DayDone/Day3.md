@@ -11,4 +11,5 @@ API's and NODEJS
   - [ ] NODEJS
 
 ### ACCM: 
-- 
+- Couldnt do anything...cz i was busy in too many miscelleneous work...
+  Sometimes the day doesnt go as you want... but that doesnt mean you stop there....make a better attempt the next day

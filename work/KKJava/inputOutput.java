@@ -31,7 +31,7 @@ public class inputOutput {
 
         // Explicit Typecasting
         int num = (int) (50.02f);
-        System.out.println("float num: " + num);
+        System.out.println("int num: 50.02 & float num: " + num);
         // auto type promotion
         int a = 102;
         int c = 128;

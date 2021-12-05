@@ -7,7 +7,7 @@ Plan:
 
 ## Task list :
 
-- [ ] JAVA 
+- [x] JAVA 
 - [ ] WEBDEV 
   - [ ] SPACE-WEBSITE
 

@@ -15,6 +15,7 @@ public class primitives {
 
         double d = 100.02;
         // double: for large decimal numbers - 8 bytes
+        // * DOUBLE is the biggest one
 
         long ln = 4512367124578936L;
         // long: for large integer values
@@ -26,6 +27,7 @@ public class primitives {
         // -------------------
         String st = "appu"; // String is not primitve
 
+        // $ No typeof or sizeof operator in JAVA
     }
 }
 // float > int

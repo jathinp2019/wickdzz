@@ -7,10 +7,10 @@ Plan:
 
 ## Task list :
 
-- [ ] JAVA 
-- [ ] WEBDEV 
-  - [ ] SPACE-WEBSITE
-  - [ ] NODEJS
+- [x] JAVA 
+- [x] WEBDEV 
+  - [x] SPACE-WEBSITE
+  - [x] NODEJS
 
 ### ACCM: 
 - 

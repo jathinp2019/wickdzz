@@ -29,6 +29,43 @@
   opacity: 1;
 }
 
+/* ----------------------- */
+
+.logo {
+  margin: 1.8rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+.primary-navigation {
+  --gap: clamp(1.5rem, 5vw, 4rem);
+  --underline-gap: 2rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 3rem 2rem;
+  background: hsl(var(--clr-white) / 0.09);
+  backdrop-filter: blur(1rem);
+  transition: all 1s linear ease-in-out;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  padding: 0.5em 0;
+  transition: all 300ms;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
 /* --- */
 
 @media (max-width: 35rem) {
@@ -43,36 +80,59 @@
 
     position: fixed;
     inset: 0 0 0 20%;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: all 700ms ease-in;
   }
-
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0);
+  }
   .primary-navigation.underline-indicators > * {
     border: 0;
   }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 1rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(/work/space-tourism-website-main/starter-code/assets/shared/icon-hamburger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+  }
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(/work/space-tourism-website-main/starter-code/assets/shared/icon-close.svg);
+  }
+  .mobile-nav-toggle:focus-visible {
+    border: 2px solid white;
+  }
 }
 
-.primary-navigation {
-  --underline-gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  padding: 3rem 2rem;
-  background: hsl(var(--clr-white) / 0.1);
-  backdrop-filter: blur(1.5rem);
+@media (min-width: 35em) and (max-width: 45em) {
+  .primary-navigation {
+    padding-inline: 2.5rem;
+  }
+  .primary-navigation a > span {
+    display: none;
+  }
+}
+@media (min-width: 35em) {
+  .primary-navigation {
+    padding-inline: clamp(3rem, 5vw, 7rem);
+  }
+}
+@media (max-width: 45em) {
+  .primary-navigation {
+    margin-block: 2rem;
+  }
 }
 
-/* --- */
-
-.primary-navigation a {
-  text-decoration: none;
-  padding: 0.5em 0;
-  transition: all 300ms;
-}
-
-.primary-navigation a > span {
-  font-weight: 700;
-  margin-right: 0.5em;
-}
-
+/* ------------ */
 .underline-indicators > * {
   cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;

@@ -128,9 +128,22 @@
   }
 }
 
-@media (max-width: 45em) {
+@media (min-width: 45em) {
+  .primary-header::before {
+    content: "";
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 25%;
+    background-color: red;
+    order: 1;
+  }
   .primary-navigation {
     margin-block: 2rem;
+  }
+
+  nav {
+    order: 2;
   }
 }
 

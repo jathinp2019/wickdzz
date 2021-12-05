@@ -8,8 +8,9 @@ Plan:
 ## Task list :
 
 - [x] JAVA 
-- [ ] WEBDEV 
-  - [ ] SPACE-WEBSITE
+- [x] WEBDEV 
+  - [x] SPACE-WEBSITE
 
 ### ACCM: 
-- 
+- Learned a lot manyyy new things at scrimba.com/learn/spacetravel
+- Finished Java basics... need to start the main things tomorrow

@@ -6,8 +6,8 @@ Plan:
  - JAVA, C++(exam tomorrow) and SPACE-WEB
 
 ## Task list :
-- [ ] C++
-- [ ] JAVA 
+- [x] C++
+- [x] JAVA 
 - [ ] WEBDEV 
   - SPACE-WEBSITE
   - Check this out https://www.youtube.com/watch?v=PeY6lXPrPaA

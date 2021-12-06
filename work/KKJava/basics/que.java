@@ -1,4 +1,5 @@
-package work.KKJava;
+
+package work.KKJava.basics;
 
 import java.util.*;
 

@@ -12,4 +12,4 @@ Plan:
   - SPACE-WEBSITE
 
 ### ACCM: 
-- 
+- Got some good ideas...made ideas.md to store all spontaneous ideas

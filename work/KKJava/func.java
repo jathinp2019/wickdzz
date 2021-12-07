@@ -1,4 +1,4 @@
-package work.KKJava.functions;
+package work.KKJava;
 
 import java.util.*;
 

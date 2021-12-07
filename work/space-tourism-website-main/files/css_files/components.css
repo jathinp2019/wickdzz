@@ -98,7 +98,7 @@
     right: 1rem;
     top: 2rem;
     background: transparent;
-    background-image: url(/work/space-tourism-website-main/starter-code/assets/shared/icon-hamburger.svg);
+    background-image: url(/starter-code/assets/shared/icon-hamburger.svg);
     background-position: center;
     background-repeat: no-repeat;
     width: 1.5rem;
@@ -106,7 +106,7 @@
     border: 0;
   }
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url(/work/space-tourism-website-main/starter-code/assets/shared/icon-close.svg);
+    background-image: url(/starter-code/assets/shared/icon-close.svg);
   }
   .mobile-nav-toggle:focus-visible {
     border: 2px solid white;

@@ -42,18 +42,18 @@ body {
 }
 
 .home {
-  background-image: url(/work/space-tourism-website-main/starter-code/assets/home/background-home-mobile.jpg);
+  background-image: url(/starter-code/assets/home/background-home-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
   .home {
     background-position: center center;
-    background-image: url(/work/space-tourism-website-main/starter-code/assets/home/background-home-tablet.jpg);
+    background-image: url(/starter-code/assets/home/background-home-tablet.jpg);
   }
 }
 @media (min-width: 45rem) {
   .home {
-    background-image: url(/work/space-tourism-website-main/starter-code/assets/home/background-home-desktop.jpg);
+    background-image: url(/starter-code/assets/home/background-home-desktop.jpg);
   }
 }
 

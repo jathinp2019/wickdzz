@@ -1,40 +1,77 @@
+/* Page specifics: bg-images*/
 .grid-container {
-  /* border: 5px solid limegreen; */
-  display: grid;
   text-align: center;
-
+  display: grid;
   place-items: center;
   padding-inline: 1rem;
 }
 
 .grid-container * {
   max-width: 50ch;
-  /* size related to each 'CHARACTER' */
 }
 
-@media (min-width: 45rem) {
+/* destination layout */
+
+.grid-container--destination {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+  --flow-space: 2rem;
+  /*or  
+      gap: 2rem;
+  would work fine*/
+}
+
+.numbered-title {
+  grid-area: title;
+}
+
+.grid-container--destination > img {
+  grid-area: image;
+  max-width: 50%;
+}
+
+.grid-container--destination > .tab-list {
+  grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+  grid-area: content;
+}
+
+.destination-meta {
+  flex-direction: column;
+  border-top: 1px solid hsl(var(--clr-white) / 0.2);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 45em) {
   .grid-container {
     text-align: left;
-    column-gap: var(--container-gap, 3rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
-        2rem,
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
         1fr
       );
   }
+
   .grid-container > *:first-child {
     grid-column: 2;
   }
+
   .grid-container > *:last-child {
     grid-column: 3;
   }
 
   .grid-container--home {
-    padding-bottom: 6rem;
+    padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
 }
 
-/* Page specifics: bg-images*/
 /* @HOME */
 body {
   background-size: cover;

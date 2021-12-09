@@ -1,12 +1,12 @@
 # DAY-9
-Still need to more productive
+Stay away from distractions....just grind 
 <br>
 
-Plan: 
+Give this a go: 
  - https://www.youtube.com/watch?v=dtKciwk_si4&t=13747s
 
 ## Task list :
-- [ ] JAVA 
+- [ ] JAVA (Do it whenever possible)
 - [ ] WEBDEV 
   - SPACE-WEBSITE (get done with it real quick! )
 

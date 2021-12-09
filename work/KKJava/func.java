@@ -1,4 +1,3 @@
-package work.KKJava;
 
 import java.util.*;
 

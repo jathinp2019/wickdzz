@@ -1,4 +1,4 @@
-package work.KKJava.basics;
+package basics;
 
 public class primitives {
     // Primitive: any data type that cannot be broken down further

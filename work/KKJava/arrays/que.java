@@ -1,4 +1,4 @@
-package KKJava.arrays;
+package arrays;
 
 import java.util.*;
 

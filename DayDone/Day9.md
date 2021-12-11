@@ -6,8 +6,8 @@ Give this a go:
  - https://www.youtube.com/watch?v=dtKciwk_si4&t=13747s
 
 ## Task list :
-- [ ] JAVA (Do it whenever possible)
-- [ ] WEBDEV 
+- [x] JAVA (Do it whenever possible)
+- [x] WEBDEV 
   - SPACE-WEBSITE (get done with it real quick! )
 
 ### ACCM: 

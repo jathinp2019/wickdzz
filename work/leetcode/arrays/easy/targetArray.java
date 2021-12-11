@@ -6,31 +6,27 @@ import java.util.*;
 
 public class targetArray {
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 0 };
-        int[] index = { 0, 1, 2, 3, 0 };
+        // int[] nums = { 1, 2, 3, 4, 0 };
+        // int[] index = { 0, 1, 2, 3, 0 };
+        int[] nums = { 0, 1, 2, 3, 4 };
+        int[] index = { 0, 1, 2, 2, 1 };
 
         int[] target = new int[index.length];
 
         for (int i = 0; i < index.length; i++) {
             System.out.println(Arrays.toString(target));
-            System.out.println(index[i] + " " + nums[i]);
 
-            if (target[index[i]] != 0) {
-                int t = target[index[i + 1]];
-
-                for (int j = 0; j < index.length; j++) {
-                    // target[index[i]=t;
-                    target[index[i] + 1] = target[index[i]];
-                    t = target[index[i] + 1];
-                }
-                target[index[i]] = nums[i];
-
-            } else
-                target[index[i]] = nums[i];
-
-            // target[index[i]] = nums[i];
+            for (int j = index.length - 1; j > index[i]; j--) {
+                target[j] = target[j - 1];
+                // shifting elements till the index point to make space
+            }
+            target[index[i]] = nums[i];
+            // adding element at the index
         }
 
+        System.out.println("final: ");
         System.out.println(Arrays.toString(target));
     }
 }
+
+// https://leetcode.com/problems/create-target-array-in-the-given-order/submissions/

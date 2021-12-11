@@ -7,9 +7,9 @@ Plan:
  - NEED TO GET INTO THE GAME REAL QUICK
 
 ## Task list :
-- [ ] JAVA 
-- [ ] WEBDEV 
+- [x] JAVA 
+- [x] WEBDEV 
   - SPACE-WEBSITE (get done with it real quick! )
 
 ### ACCM: 
-- 
+- Learnt linear search and started leetcode

@@ -188,6 +188,15 @@ textarea {
   /* outline: 1px solid red; */
 }
 
+.flow--space-small {
+  --flow-space: 0.5rem;
+}
+.flow--space-med {
+  --flow-space: 1rem;
+}
+.flow--space-big {
+  --flow-space: 1.5rem;
+}
 /* or equivalent to
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
@@ -284,3 +293,7 @@ textarea {
 }
 
 /* UTILITY CLASSES DONE */
+
+.outline {
+  outline: 2px solid yellow;
+}

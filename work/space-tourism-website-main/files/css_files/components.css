@@ -159,7 +159,7 @@
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
-  border-color: hsl(var(--clr-white) / 0.5);
+  border-color: hsl(var(--clr-white) / 0.8);
 }
 .underline-indicators > .active,
 .underline-indicators > [aria-selected="true"] {
@@ -181,7 +181,7 @@
 
 .dot-indicators > *:hover,
 .dot-indicators > *:focus {
-  background-color: hsl(var(--clr-white) / 0.5);
+  background-color: hsl(var(--clr-white) / 0.8);
 }
 
 .dot-indicators > [aria-selected="true"] {

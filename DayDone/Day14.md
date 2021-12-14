@@ -1,4 +1,5 @@
-# DAY-13
+# DAY-10
+Aim to have a productive and peaceful day !!
 <br>
 
 Plan: 
@@ -9,6 +10,7 @@ Plan:
 ## Task list :
 - [ ] JAVA 
 - [ ] WEBDEV 
+- [ ] dsc projects
 
 ### ACCM: 
 -  Not doing anything!...mind needs rest

@@ -1,5 +1,4 @@
 # DAY-14
-Aim to have a productive and peaceful day !!
 <br>
 
 Plan: 
@@ -8,9 +7,12 @@ Plan:
  - Start on CGKG thing AGAIN
 
 ## Task list :
-- [ ] JAVA 
-- [ ] WEBDEV 
-- [ ] dsc projects
+- [x] JAVA 
+- [x] WEBDEV 
+- [x] dsc projects
 
 ### ACCM: 
--  Not doing anything!...mind needs rest
+- Did some leetcode que on JAVA
+- Sorted that DSC application
+- Redesigned CGKG!!
+- WAS A SLOW AND UNPRODUCTIVE DAY 😐

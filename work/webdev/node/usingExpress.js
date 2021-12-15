@@ -1,4 +1,5 @@
 const express = require("express");
+const userRouter = require("./users");
 const app = express(); // creating an application
 
 app.get("/", (req, res, next) => {
@@ -29,6 +30,9 @@ app.get("/toFront", (req, res) => {
 });
 
 //---------------------------------
+app.use("/users", userRouter);
+
+// this means that use the 'userRouters' with the base dir of '/users'...so that we dnt hv to use it multple times while nesting... and makes it a cleaner code
 
 app.listen(3000, () => {
   console.log("Server 3000");

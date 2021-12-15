@@ -3,13 +3,19 @@
 
 
 ## TIC-TAC-TOE!
-- [ ] Strengthen JS!
+- [x] Strengthen JS!
+
+- [ ] (Try making it a multiplayer 😉)
+  
 <div style="color:green">EASY </div>
 
 ------------------------
+
 ## FLAPPY-BIRD:
 - [ ] try flappy bird
 <div style="color:YELLOW"> INTERMEDIATE </div>
+
+------------------------
 
 ## WEATHER APP
 - [ ] Using API'S

@@ -11,7 +11,6 @@ Plan:
 - [ ] JAVA 
 - [ ] WEBDEV 
 - [ ] CGKG
-- [ ] Some college studies plzz!!
 
 ### ACCM: 
-- 
+- Completed my Tic-tac-Toe

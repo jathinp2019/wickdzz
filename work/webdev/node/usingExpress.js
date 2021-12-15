@@ -20,7 +20,7 @@ app.get("/json", (req, res, next) => {
 app.set("view engine", "ejs");
 // and the file too should be with '.ejs' extension
 app.get("/", (req, res, next) => {
-  res.render("render");
+  res.render("rendering");
 });
 // by default it will be saved inside 'views' file
 

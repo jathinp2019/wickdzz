@@ -61,19 +61,22 @@ app.use(express.static("public"));
 
 //---------------------------------
 // @ Parsing JSON data from frontend
-app.use(express.urlencoded({ extended: true }));
+
+app.use(express.urlencoded({ extended: true })); // to get data from form
 
 app.get("/form", (req, res) => {
   res.render("forms");
 });
 
 app.post("/form", (req, res) => {
+  const isValid = true;
+  if (isValid) {
+  }
+
   console.log(req.body.firstname); // getting the data
   res.send("User Created");
 });
 
-//---------------------------------
-//---------------------------------
 //---------------------------------
 app.use("/users", userRouter);
 

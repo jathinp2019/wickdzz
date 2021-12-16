@@ -8,9 +8,10 @@ Plan:
  - Start on CGKG thing AGAIN
 
 ## Task list :
-- [ ] JAVA 
-- [ ] WEBDEV 
-- [ ] CGKG
+- [x] JAVA 
+- [x] WEBDEV 
+- [x] CGKG
 
 ### ACCM: 
-- Completed my Tic-tac-Toe
+- Completed my Tic-Tac-Toe
+- Did some java

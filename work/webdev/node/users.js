@@ -32,7 +32,7 @@ router
 
   .get((req, res) => {
     console.log(req.u);
-    res.send(`GET param: ${req.params.p}`);
+    res.send(`GET param: ${req.params.p} => ${req.u}`);
   })
 
   .put((req, res) => {
@@ -51,6 +51,7 @@ const users = [
   { n: "kutta", num: 10 },
 ];
 
+//this is MIDDLEWARE
 router.param("p", (req, res, next, p) => {
   req.u = users[p].n;
   //   console.log(

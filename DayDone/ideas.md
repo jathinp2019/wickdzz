@@ -5,7 +5,12 @@
 ## TIC-TAC-TOE!
 - [x] Strengthen JS!
 
-- [ ] (Try making it a multiplayer 😉)
+  
+<div style="color:green">EASY </div>
+
+------------------------
+## PATTERN PASSWORD AUTH
+- [ ] Pattern Password auth!!  just like in mobile patterns...but for computer 
   
 <div style="color:green">EASY </div>
 

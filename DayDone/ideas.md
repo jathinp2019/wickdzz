@@ -4,8 +4,6 @@
 
 ## TIC-TAC-TOE!
 - [x] Strengthen JS!
-
-  
 <div style="color:green">EASY </div>
 
 ------------------------
@@ -24,6 +22,11 @@
 
 ## WEATHER APP
 - [ ] Using API'S
+<div style="color:YELLOW"> INTERMEDIATE </div>
+  
+------------------------
+## MUSIC PLAYER(or a spotify clone)
+- [ ] Spotify API
 <div style="color:YELLOW"> INTERMEDIATE </div>
   
 ------------------------
@@ -56,3 +59,5 @@ https://dribbble.com/vaishakhN/collections/5367457-space
 <div style="color:orange"> HARD </div>
 
 
+# CLONES!!!!!
+- Make website clonesss

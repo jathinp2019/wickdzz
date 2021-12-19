@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            background-color: #000957
+        }
+
+        main {
+            position: relative;
+            height: 600px;
+            width: 600px;
+            margin-inline: 3rem;
+            overflow: hidden;
+            background-image: url(pics/fpbird\ bg.png);
+            background-size: cover;
+            margin-block: 10px;
+            border-radius: 10px
+        }
+
+        .col {
+            display: block;
+            position: absolute;
+            height: 300px;
+            width: 70px;
+            bottom: 0;
+            right: -100px;
+            background-color: cadetblue;
+            background-color: greenyellow;
+            animation: col 3s infinite forwards;
+        }
+
+        .col::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 550px;
+            width: 70px;
+            bottom: 100%;
+            margin-bottom: 120px;
+            right: 0;
+            border: 2px solid black;
+            background-color: greenyellow;
+        }
+
+        .bird {
+            z-index: 10;
+            position: absolute;
+            /* bottom: 300px; */
+            left: 100px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-image: url(pics/fpbird.png);
+            background-size: contain;
+        }
+
+        .grnd {
+            z-index: 5;
+            height: 50px;
+            position: absolute;
+            width: 600px;
+            bottom: 0;
+            background-color: green;
+
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #start {
+            height: 100px;
+            width: 200px;
+            font-size: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: bisque;
+            border: 2px solid brown;
+            text-align: center;
+        }
+
+        #playAgain {
+            height: 100px;
+            width: 200px;
+            font-size: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: bisque;
+            border: 2px solid brown;
+            text-align: center;
+        }
+
+        .hide {
+            display: none
+        }
+
+        .counter {
+            height: 50px;
+            width: 300px;
+            background-color: blanchedalmond;
+            font-size: 1.8rem;
+            font-weight: 400;
+            justify-content: space-evenly;
+        }
+
+        span {
+            font-weight: 700;
+            color: white;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter flex">
+        Counter: <div></div>
+    </div>
+    <main class="container flex">
+        <div class="gap"></div>
+        <div class="bird"></div>
+        <div class="grnd"></div>
+    </main>
+    <span>FLAPPY BIRD</span>
+    <script src="flappy.js"></script>
+</body>
+
+</html>

@@ -8,9 +8,6 @@ Plan:
  - Start my own js projects (ASAP)
 
 ## Task list :
-- [ ] JAVA 
-- [ ] WEBDEV 
-- [ ] COLLEGE STUDIES!!!
-
-### ACCM: 
-- 
+- [x] JAVA 
+- [x] WEBDEV 
+- [x] COLLEGE STUDIES!!!

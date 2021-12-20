@@ -8,7 +8,7 @@ Plan:
 
 ## Task list :
 - [ ] JAVA 
-- [ ] WEBDEV (Look more about CHAT app)
+- [ ] WEBDEV (Look more about CHAT app)  [Specifically try strengthening your backend]
 - [ ] COLLEGE STUDIES!!!
 
 ### ACCM: 

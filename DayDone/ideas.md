@@ -15,13 +15,13 @@
 ------------------------
 
 ## FLAPPY-BIRD:
-- [ ] try flappy bird
+- [x] try flappy bird
 <div style="color:YELLOW"> INTERMEDIATE </div>
 
 ------------------------
 
 ## WEATHER APP
-- [ ] Using API'S
+- [x] Using API'S
 <div style="color:YELLOW"> INTERMEDIATE </div>
   
 ------------------------

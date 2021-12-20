@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        .info {
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid black;
+            text-transform: uppercase;
+        }
+
+        .tempr {
+            color: orange;
+        }
+
+        .day {
+            color: indigo
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info tempr"></div>
+    <div class="info day"></div>
+    <div class="info desc"></div>
+
+    <script>
+        var tmp = document.querySelector('.tempr')
+        var day = document.querySelector('.day')
+        var desc = document.querySelector('.desc')
+
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Belagavi&units=metric&appid=931ad39fd11e36b1834a82e7f4b2ba5a')
+            .then(response => response.json())
+            .then((data) => {
+                tmp.innerText = data.main.temp
+                day.innerText = data.name
+                desc.innerText = data.weather[0].description
+                console.log(data)
+            })
+            .catch(err => console.log("error !! "))
+
+    </script>
+</body>
+
+</html>

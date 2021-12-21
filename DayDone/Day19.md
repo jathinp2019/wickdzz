@@ -8,7 +8,6 @@ Plan:
  - Study maths/dbms
 
 ## Task list :
-- [ ] JAVA 
 - [x] WEBDEV 
 - [ ] COLLEGE STUDIES!!!
 

@@ -20,6 +20,12 @@
 
 ------------------------
 
+## ROCK PAPER SCISSOR:
+- [ ] Give it ur touch
+<div style="color:YELLOW"> INTERMEDIATE </div>
+
+------------------------
+
 ## WEATHER APP
 - [x] Using API'S
 <div style="color:YELLOW"> INTERMEDIATE </div>
@@ -27,6 +33,11 @@
 ------------------------
 ## MUSIC PLAYER(or a spotify clone)
 - [ ] Spotify API
+<div style="color:YELLOW"> INTERMEDIATE </div>
+
+------------------------
+## POMODORO APP
+- [ ] <img src='pomodoro.jpg'></img>
 <div style="color:YELLOW"> INTERMEDIATE </div>
   
 ------------------------

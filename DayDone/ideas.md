@@ -36,11 +36,6 @@
 <div style="color:YELLOW"> INTERMEDIATE </div>
 
 ------------------------
-## POMODORO APP
-- [ ] <img src='pomodoro.jpg'></img>
-<div style="color:YELLOW"> INTERMEDIATE </div>
-  
-------------------------
 
 ## TODO:
 <div style="color:orange"> HARD </div>
@@ -51,9 +46,14 @@
   MAYBE TRY MAKING SOMETHING LIKE THIS!!!!  ... would be awesome as for a portfolio project 😎
 
 - [ ]  A basic TODO app...start small...then go big!
-- [ ] Add a alarm/timer system to your TODO app
+- [ ] Add a alarm/timer system to your TODO app (A pomodoro system)
+  
 - [ ] Add a tag system ...like the one in actual TODO
 - [ ] Use Nodejs with db implementation too!! /  learn about local storage!!
+
+#### Include this here
+- [ ] <img src='pomodoro.jpg'></img>
+  
   
 ------------------------
 
@@ -75,3 +75,5 @@ https://dribbble.com/vaishakhN/collections/5367457-space
 
 # CLONES!!!!!
 - Make website clonesss
+- [ ] Apple clone!!
+- [ ] Microsoft clone!!

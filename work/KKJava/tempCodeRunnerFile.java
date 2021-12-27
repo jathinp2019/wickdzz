@@ -1,4 +1,4 @@
-public class file {
+public class tempCodeRunnerFile {
     public static void main(String[] args) {
         residential_property rp = new residential_property(45 * 60, "city");
         rp.calculate_cost();

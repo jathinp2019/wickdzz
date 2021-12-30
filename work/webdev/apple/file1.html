@@ -12,10 +12,12 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
     }
 
     main {
         height: 100vh;
+        position: relative;
     }
 
     video {
@@ -27,11 +29,48 @@
     body {
         background-color: black;
     }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .border {
+        outline: 2px solid blue;
+    }
+
+    .txt-white {
+        color: white;
+
+    }
+
+    .text {
+        padding: 2rem;
+        font-size: 4rem;
+        font-weight: 700;
+        z-index: 3;
+        position: absolute;
+        margin: 0 10rem;
+        text-align: center;
+    }
+
+    .hide {
+        opacity: 0;
+    }
 </style>
 
 <body>
-    <main>
+    <main class="flex" id="start">
         <video src="/apple/v1.mp4" preload></video>
+        <div class="text txt-white hide" id="txt1">Active Noise Cancellation <br>for Immersive sound</div>
+        <div class="text hide txt-white" id="txt2">Transparency mode for hearing what's happening around you</div>
+        <div class="text hide txt-white" id="txt3">A customisable fit for all-day comfort </div>
     </main>
 
 
@@ -56,7 +95,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="scroll.js"></script>
-    <!-- <script src="text.js"></script> -->
+    <script src="text.js"></script>
 </body>
 
 </html>

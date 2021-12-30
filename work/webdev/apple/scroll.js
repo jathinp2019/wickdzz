@@ -1,6 +1,9 @@
 const main = document.querySelector("main");
 const vid = document.querySelector("main video");
+const vidContainer = document.querySelector(".vidContainer");
 const txt = document.querySelector(".text");
+
+const txt1 = document.querySelector("#txt1");
 
 let count = 0;
 
@@ -20,20 +23,15 @@ let delay = 0;
 
 scene1.on("update", (e) => {
   scrollpos = (e.scrollPos - e.startPos) / 1000;
-
   let time = vid.currentTime.toFixed(2);
 
-  // console.log(time);
-
-  if (time >= 1.5 && time < 1.7) {
-    count++;
-    t1();
-    return;
+  if (time >= 2 && time < 2.32) {
+    ++count;
   }
+  if (count == 1) t1();
 });
 
 setInterval(() => {
   delay += (scrollpos - delay) * acc;
   vid.currentTime = scrollpos;
-  // console.log(vid.currentTime);
 }, 50);

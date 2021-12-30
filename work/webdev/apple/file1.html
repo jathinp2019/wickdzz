@@ -58,18 +58,33 @@
         position: absolute;
         margin: 0 10rem;
         text-align: center;
+        opacity: 0;
     }
 
     .hide {
         opacity: 0;
     }
+
+    .none {
+        display: none;
+    }
+
+    .vidContainer {
+        height: 80vh;
+        position: absolute;
+    }
 </style>
 
 <body>
     <main class="flex" id="start">
-        <video src="/apple/v1.mp4" preload></video>
+        <div class="vidContainer border">
+            <video src="/pics/vid1.mp4" preload></video>
+        </div>
+
         <div class="text txt-white hide" id="txt1">Active Noise Cancellation <br>for Immersive sound</div>
+
         <div class="text hide txt-white" id="txt2">Transparency mode for hearing what's happening around you</div>
+
         <div class="text hide txt-white" id="txt3">A customisable fit for all-day comfort </div>
     </main>
 

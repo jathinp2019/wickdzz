@@ -15,8 +15,9 @@
     }
 
     body {
+        position: relative;
         margin: 0;
-        padding-inline: 2rem;
+        /* padding-inline: 2rem; */
         flex-direction: column;
         box-sizing: border-box;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -51,6 +52,7 @@
     section {
         height: 100vh;
         width: 100%;
+        position: relative;
     }
 
     .intro {
@@ -65,28 +67,49 @@
         object-fit: contain;
         /* z-index: 1000; */
     }
+
+    .text {
+        font-size: 3rem;
+        font-weight: 900;
+        display: block;
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 5%;
+        max-width: 70%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .heading {
+        font-size: 5rem;
+        font-weight: 900;
+        position: absolute;
+        margin: 0 2rem;
+    }
 </style>
 
 
 <body class="flex">
-    <section class="flex bg-black">
-        <h1>START</h1>
-    </section>
+    <!-- <section class="flex bg-black">
+    </section> -->
 
     <section class="flex bg-black vh-100 intro border">
+        <!-- <div class="heading">APPLE</div> -->
         <video src="/pics/vid1.mp4" preload></video>
-
+        <div class="text " id="t1">Active Noise Cancellation
+            for immersive sound.</div>
+        <div class="text " id="t2">Transparency mode for hearing what's happening around you.</div>
     </section>
-
 
     <section class="flex bg-white vh-100 ">
-        <h1>END</h1>
+        <h1>NEXT</h1>
     </section>
 
+    <section class="mid flex bg-black vh-100 ">
+        <video src="/pics/bigone.mp4" id="vid2" preload></video>
+        <div class="text" id="t3">Magic never seen before!</div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
@@ -97,8 +120,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
         integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+        integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"
+        integrity="sha512-MBKN+F1LTtgzsnhh92u6fEklbJbv13vKI/2BZP0LLR8+IMeqlp0h10R6afWaJv2HIJfTOQkjW0LCPrIFEkZVeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- <script src="scroll.js"></script> -->
+    <script src="scrollTween.js"></script>
 
 </body>
 

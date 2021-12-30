@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANGE</title>
+    <style>
+        body {
+            height: 200vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        img,
+        video {
+            position: fixed;
+            top: 100px;
+            left: 5rem;
+            height: 500px;
+            width: 80%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="range">
+        <div class="sliderValue">
+            <!-- 100 -->
+            <!-- <input type="range" min="0" max="100"> -->
+            <!-- <img src="/pics/01-hero-lightpass/video/video0001.png" loading="lazy"> -->
+            <video src="/pics/vid1.mp4"></video>
+        </div>
+    </div>
+
+    <script>
+        const range = document.querySelector('input')
+        const img = document.querySelector('img')
+        const video = document.querySelector('video')
+        const imgArea = document.querySelector('.sliderValue')
+        let n = 1;
+
+        window.addEventListener('scroll', () => {
+
+            if (this.oldScroll > this.scrollY) {
+                n <= 1 ? 1 : n--;
+            }
+            else if (this.oldScroll < this.scrollY) {
+                n++;
+            }
+            this.oldScroll = this.scrollY;
+
+            // imgArea.innerHTML = `<img src="/pics/01-hero-lightpass/video/video${n.toString().padStart(4, 0)}.png" preload>`
+
+            // requestAnimationFrame(() => {
+            // })
+            // img.src = `/pics/01-hero-lightpass/video/video${n.toString().padStart(4, 0)}.png" `
+            // } else n = 1
+            video.currentTime = n / 30
+            // } else return
+
+            console.log(n)
+
+        })
+    </script>
+</body>
+
+</html>

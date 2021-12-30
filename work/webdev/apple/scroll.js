@@ -24,14 +24,20 @@ let delay = 0;
 scene1.on("update", (e) => {
   scrollpos = (e.scrollPos - e.startPos) / 1000;
   let time = vid.currentTime.toFixed(2);
+  console.log(scrollY);
 
-  if (time >= 2 && time < 2.32) {
+  // if (time >= 2 && time < 2.32) {
+  //   ++count;
+  // }
+  if (scrollY >= 2200 && scrollY < 2300) {
     ++count;
+    // if (count == 1)
+    t1();
+    // return;
   }
-  if (count == 1) t1();
 });
 
 setInterval(() => {
   delay += (scrollpos - delay) * acc;
   vid.currentTime = scrollpos;
-}, 50);
+}, 20);

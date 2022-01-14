@@ -1,44 +1,37 @@
-const express = require("express");
+//@  SERVER SCRIPTING
+
+const path = require("path");
 const http = require("http");
+const express = require("express");
 const socketio = require("socket.io");
 
 const app = express();
 const server = http.createServer(app);
-// const server = http.Server(app);
-// NOTE : server here is an EventEmitter object
 const io = socketio(server);
-// io is an interface via which sockets can connect
 
-let idUserMap = {};
+const port = 3000 || process.env.PORT;
+
+app.use(express.static(path.join(__dirname, "public")));
 
 io.on("connection", (socket) => {
-  console.log("Connected " + socket.id);
+  console.log("new connection");
 
-  socket.on("login", (data) => {
-    idUserMap[socket.id] = data.username;
-    socket.emit("loggedin");
+  //when client connects
+  socket.emit("message", "Welcome , Connection established"); // "message" from main.js will be accessed
+
+  //when user connects(broadcast)
+  socket.broadcast.emit("message", "User joined"); // BROADCAST: evryone other than user
+
+  socket.on("disconnect", () => {
+    io.emit("message", "A USER LEFT"); //to evryone
   });
 
-  socket.on("chat", (data) => {
-    io.emit("chat_rcvd", {
-      username: idUserMap[socket.id],
-      msg: data.msg,
-    }); // will send to all sockets in io
-
-    // socket.broadcast.emit('chat_rcvd', {
-    //     username: idUserMap[socket.id],
-    //     msg: data.msg
-    // })
-
-    // io.emit('chat_rcvd', {
-    //     username: idUserMap[socket.id],
-    //     msg: data.msg
-    // })
+  //Listen for chat
+  socket.on("chatMessage", (msg) => {
+    console.log(msg);
   });
 });
 
-app.use("/", express.static(__dirname + "/public"));
-
-server.listen(3333, () => {
-  console.log("Server has started on http://localhost:3333");
+server.listen(port, () => {
+  console.log(`Server Listening ${port}`);
 });

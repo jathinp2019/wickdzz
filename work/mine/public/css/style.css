@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --ff-nn: "Nunito", sans-serif;
+  --ff-pp: "Poppins", sans-serif;
+
+  --darkgreen: #3e8e7e;
+  --vlightgreen: #bfe0d8;
+  --lightgreen: #f2ffe9;
+  --offwhite: #f5f5f5;
+}
+
+body {
+  padding: 1rem;
+  background-color: #f2ffe9;
+  /* border: 2px solid red; */
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.column {
+  flex-direction: column;
+}
+.outline {
+  outline: 2px solid black;
+}
+.vh-100 {
+  height: 95vh;
+  background-color: #f5f5f5;
+}
+.fs-ubig {
+  font-size: 3rem;
+}
+.fs-big {
+  font-size: 2rem;
+}
+.fs-med {
+  font-size: 1.5rem;
+}
+.fs-small {
+  font-size: 0.8rem;
+}
+.fs-vsmall {
+  font-size: 0.6rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 700;
+}
+
+.ff-nn {
+  font-family: var(--ff-nn);
+}
+.ff-pp {
+  font-family: var(--ff-pp);
+}
+
+.users {
+  width: 30vw;
+  position: relative;
+  background-color: white;
+}
+.messages {
+  position: relative;
+  width: 70vw;
+}
+.profile {
+  position: relative;
+  background-color: white;
+  width: 30vw;
+}
+.groupName {
+  padding: 1.2rem;
+}
+#formInput {
+  position: absolute;
+  padding: 1.1rem;
+  bottom: 0;
+  width: 100%;
+}
+#formInput input {
+  width: 80%;
+  padding: 0.5rem;
+}
+
+#submit {
+  padding: 0.5rem;
+  width: 10%;
+  margin-inline: 0.5rem;
+  background-color: #3e8e7e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.messageArea {
+  padding: 0.5rem;
+}
+
+.sendMessage,
+.receiveMessage {
+  font-size: 1.1rem;
+  height: auto;
+  /* width: max-content; */
+  min-width: 120px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  /* margin-block: 0.5rem; */
+}
+.receiveMessage {
+  background-color: var(--vlightgreen);
+  align-self: flex-start;
+}
+.sendMessage {
+  background-color: white;
+  align-self: flex-end;
+}
+.msg {
+  margin-inline: 0.5rem;
+}
+.msgBox {
+  height: auto;
+  padding-block: 0.3rem;
+}
+
+.title {
+  padding: 0.5rem 0.2rem;
+}
+
+.userList {
+  padding: 1.2rem;
+}
+
+.us {
+  padding: 1.2rem;
+  margin-inline: 0.5rem;
+}
+
+.userBox {
+  padding: 1rem 0.5rem;
+  background-color: #f9f9f9;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: yellowgreen;
+}
+.user {
+  margin-right: 0.7rem;
+}
+.bg-red {
+  background-color: red;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <main class="flex">
+        <div class="users vh-100 outline">
+            <div class="title flex ff-nn fs-big  outline fw-700">Chat RooM</div>
+
+            <div class="us ff-nn fs-med fw-500">USERS</div>
+
+            <div class="userList ">
+                <!-- <div class="userBox ff-pp outline flex space-between">
+                    Empty
+                    <div class="circle"></div>
+                </div> -->
+                <!-- <div class="userBox ff-pp outline flex space-between">
+                    Janny
+                    <div class="circle"></div>
+                </div>
+                <div class="userBox ff-pp outline flex space-between">
+                    Janardhan
+                    <div class="circle"></div>
+                </div> -->
+
+            </div>
+        </div>
+
+
+        <div class="messages vh-100 outline">
+            <div class="groupName fs-med ff-nn outline fw-700">
+                yesItsAGroupChat
+            </div>
+
+            <div class="messageArea">
+                <!-- <div class="msgBox flex column">
+                    <div class="userJoin ff-pp fs-small fw-500">
+                        <div class="msg">
+                            Someone Joined
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="msgBox flex column">
+                    <div class="receiveMessage ff-pp fs-small fw-400">
+                        <div class="flex space-between">
+                            <div class="msguser fs-small">USER</div>
+                            <div class="msgtime fs-small">time</div>
+                        </div>
+                        <div class="msg">
+                            Receiver
+                        </div>
+                    </div>
+                </div>
+
+                <div class="msgBox flex column">
+                    <div class="sendMessage ff-pp fs-small fw-400">
+                        <div class="flex space-between">
+                            <div class="user fs-small">USER</div>
+                            <div class="time fs-small">time</div>
+                        </div>
+                        <div class="msg">
+                            Sender
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <form action="" id="formInput" class="outline ff-nn" autocomplete="off">
+                <input type="text" id="messageInput" class="ff-nn" placeholder="Type here!">
+                <button type="submit" id="submit" class="fs-small ff-pp fw-500">SEND</button>
+            </form>
+        </div>
+        <div class="profile vh-100 outline"></div>
+    </main>
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="js/main.js"></script>
+
+</html>

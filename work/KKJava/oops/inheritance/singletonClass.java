@@ -27,8 +27,8 @@ class singleton {
             instance = new singleton();
         }
 
-        // if there are mroe than 1 instance...then return the already existing instance
-        // only rather than making a new one
+        // if there are mroe than 1 instance...then return the already existing
+        // instance only rather than making a new one
 
         return instance;
     }

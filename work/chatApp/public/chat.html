@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <!-- <link rel="stylesheet" href="/public/css/style.css"> -->
+    <!-- <script defer src="http://localhost:2550/auth/login/socket.io.js"></script> -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@400;500;700;900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ff-nn: "Nunito", sans-serif;
+            --ff-pp: "Poppins", sans-serif;
+
+            --darkgreen: #3e8e7e;
+            --vlightgreen: #bfe0d8;
+            --lightgreen: #f2ffe9;
+            --offwhite: #f5f5f5;
+        }
+
+        body {
+            padding: 1rem;
+            background-color: #f2ffe9;
+            /* border: 2px solid red; */
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .outline {
+            outline: 2px solid black;
+        }
+
+        .vh-100 {
+            height: 95vh;
+            background-color: #f5f5f5;
+        }
+
+        .fs-ubig {
+            font-size: 3rem;
+        }
+
+        .fs-big {
+            font-size: 2rem;
+        }
+
+        .fs-med {
+            font-size: 1.5rem;
+        }
+
+        .fs-small {
+            font-size: 0.8rem;
+        }
+
+        .fs-vsmall {
+            font-size: 0.6rem;
+        }
+
+        .fw-400 {
+            font-weight: 400;
+        }
+
+        .fw-500 {
+            font-weight: 500;
+        }
+
+        .fw-700 {
+            font-weight: 700;
+        }
+
+        .ff-nn {
+            font-family: var(--ff-nn);
+        }
+
+        .ff-pp {
+            font-family: var(--ff-pp);
+        }
+
+        .users {
+            width: 30vw;
+            position: relative;
+            background-color: white;
+        }
+
+        .messages {
+            position: relative;
+            width: 70vw;
+        }
+
+        .profile {
+            position: relative;
+            background-color: white;
+            width: 30vw;
+        }
+
+        .groupName {
+            padding: 1.2rem;
+        }
+
+        #formInput {
+            position: absolute;
+            padding: 1.1rem;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #formInput input {
+            width: 80%;
+            padding: 0.5rem;
+        }
+
+        #submit {
+            padding: 0.5rem;
+            width: 10%;
+            margin-inline: 0.5rem;
+            background-color: #3e8e7e;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .messageArea {
+            padding: 0.5rem;
+        }
+
+        .sendMessage,
+        .receiveMessage {
+            font-size: 1.1rem;
+            height: auto;
+            /* width: max-content; */
+            min-width: 120px;
+            max-width: 500px;
+            line-break: strict;
+            word-break: break-all;
+            padding: 0.5rem;
+            border-radius: 5px;
+            /* margin-block: 0.5rem; */
+        }
+
+        .receiveMessage {
+            background-color: var(--vlightgreen);
+            align-self: flex-start;
+        }
+
+        .sendMessage {
+            background-color: white;
+            align-self: flex-end;
+        }
+
+        .msg {
+            margin-inline: 0.5rem;
+        }
+
+        .msgBox {
+            height: auto;
+            padding-block: 0.3rem;
+        }
+
+        .title {
+            padding: 0.5rem 0.2rem;
+        }
+
+        .userList {
+            padding: 1.2rem;
+        }
+
+        .us {
+            padding: 1.2rem;
+            margin-inline: 0.5rem;
+        }
+
+        .userBox {
+            padding: 1rem 0.5rem;
+            background-color: #f9f9f9;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        .circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+        }
+
+        .user {
+            margin-right: 0.7rem;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <main class="flex">
+        <div class="users vh-100 outline">
+            <div class="title flex ff-nn fs-big  outline fw-700">Chat RooM</div>
+
+            <div class="us ff-nn fs-med fw-500">USERS</div>
+
+            <div class="userList ">
+                <!-- <div class="userBox ff-pp outline flex space-between">
+                    Empty
+                    <div class="circle"></div>
+                </div> -->
+                <!-- <div class="userBox ff-pp outline flex space-between">
+                    Janny
+                    <div class="circle"></div>
+                </div>
+                <div class="userBox ff-pp outline flex space-between">
+                    Janardhan
+                    <div class="circle"></div>
+                </div> -->
+
+            </div>
+        </div>
+
+
+        <div class="messages vh-100 outline">
+            <div class="groupName fs-med ff-nn outline fw-700">
+                yesItsAGroupChat
+            </div>
+
+            <div class="messageArea">
+                <!-- <div class="msgBox flex column">
+                    <div class="userJoin ff-pp fs-small fw-500">
+                        <div class="msg">
+                            Someone Joined
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="msgBox flex column">
+                    <div class="receiveMessage ff-pp fs-small fw-400">
+                        <div class="flex space-between">
+                            <div class="msguser fs-small">USER</div>
+                            <div class="msgtime fs-small">time</div>
+                        </div>
+                        <div class="msg">
+                            Receiver
+                        </div>
+                    </div>
+                </div>
+
+                <div class="msgBox flex column">
+                    <div class="sendMessage ff-pp fs-small fw-400">
+                        <div class="flex space-between">
+                            <div class="user fs-small">USER</div>
+                            <div class="time fs-small">time</div>
+                        </div>
+                        <div class="msg">
+                            Sender
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <form action="" id="formInput" class="outline ff-nn" autocomplete="off">
+                <input type="text" id="messageInput" class="ff-nn" placeholder="Type here!">
+                <button type="submit" id="submit" class="fs-small ff-pp fw-500">SEND</button>
+            </form>
+        </div>
+        <div class="profile vh-100 outline"></div>
+    </main>
+</body>
+
+
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- <script src="/public/js/main.js"></script> -->
+
+<script>
+    // const { io } = require("socket.io-client");
+
+    // const socket = io();
+    const socket = io();
+
+    const usersDisplay = document.querySelector(".userList");
+    const messageDisplay = document.querySelector(".messageArea");
+    const nameForm = document.querySelector("#nameForm");
+    const nameInput = document.querySelector("#nameInput");
+    const formInput = document.querySelector("#formInput");
+    const messageInput = document.querySelector("#messageInput");
+
+    let users = [];
+    var receiver = "";
+    var sender = "";
+    var c = 0;
+
+    var nameIn = prompt("Please enter your name", "Name");
+    sender = nameIn;
+    socket.emit("userConnected", nameIn); //to server
+    document.querySelector("title").innerText = nameIn;
+    joinUser("You", "connected");
+
+    formInput.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let message = messageInput.value;
+        let time = new Date().toLocaleTimeString();
+        let id = Math.floor(Math.random() * 300)
+        let pass = {
+            id: id,
+            sender: sender,
+            receiver: "user",
+            message: message,
+            time: time,
+        };
+
+        socket.emit("sendMessage", pass);
+
+        createMessage({
+            sender: sender,
+            time: time,
+            message: message,
+        });
+        messageInput.value = "";
+    });
+
+    socket.on("userConnected", function (name) {
+        createUser(name);
+
+        users.push(name);
+
+        // console.log(users);
+        joinUser(name, "Connected");
+    });
+    console.log(users);
+
+    socket.on("newMessage", (data) => {
+        receivedMessage(data);
+    });
+
+    function createUser(user) {
+        const div = document.createElement("div");
+        div.innerHTML = ` <div class="userBox ff-pp outline flex space-between">
+  ${user}
+  <div class="circle"></div>
+</div>`;
+        usersDisplay.appendChild(div);
+    }
+
+    function joinUser(user, message) {
+        const div = document.createElement("div");
+        div.innerHTML = ` <div class="msgBox flex column">
+  <div class="userJoin ff-pp fs-small fw-500">
+      <div class="msg">
+          ${user} ${message}
+      </div>
+  </div>
+</div>`;
+        messageDisplay.appendChild(div);
+    }
+
+    function receivedMessage(data) {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+  <div class="msgBox flex column">
+  // <div class="receiveMessage ff-pp fs-small fw-400">
+  <div class="flex space-between">
+      <div class="user fs-small">${data.sender}</div>
+      <div class="time fs-small">${data.time}</div>
+  </div>
+  <div class="msg">
+  ${data.message}
+  </div>
+</div>
+</div>
+  `;
+        messageDisplay.appendChild(div);
+    }
+
+    function createMessage(pass) {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+  <div class="msgBox flex column">
+  <div class="sendMessage ff-pp fs-small fw-400">
+  <div class="flex space-between">
+      <div class="user fs-small">${pass.sender}</div>
+      <div class="time fs-small">${pass.time}</div>
+  </div>
+  <div class="msg">
+  ${pass.message}
+  </div>
+  </div>
+</div>
+  `;
+        messageDisplay.appendChild(div);
+    }
+
+    socket.on("disconnected", (id) => {
+        if (id) joinUser(id, "Disconnected");
+
+        document.querySelectorAll(".userBox").forEach((user) => {
+            if (user.innerText == id) {
+                console.log("Inside : ", id);
+                let circle = user.querySelector(".circle");
+                circle.classList.add("bg-red");
+            }
+        });
+    });
+
+
+</script>
+
+</html>

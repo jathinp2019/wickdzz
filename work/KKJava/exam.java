@@ -9,16 +9,20 @@ class exceptionHandle extends Exception {
 }
 
 public class exam {
-    public static void main(String[] args) {
-        testing t = new testing();
+    public static void main(String args[]) {
+        int a = 10;
+        int b = 5;
+        int c = 20;
+        System.out.println(a < b & a < c);
+        System.out.println(a < b && a < c);
+    }
+}
 
-        try {
-            t.validate();
-        } catch (exceptionHandle e) {
-            System.out.println("Caught the exception");
+class Demo {
+    final int num = 100;
 
-            System.out.println("Exception occured: " + e);
-        }
+    public void setNum(String num) {
+        // this.num = 50;
     }
 }
 

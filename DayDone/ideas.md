@@ -22,7 +22,7 @@
 
 ## ROCK PAPER SCISSOR:
 - [ ] Give it ur touch
-<div style="color:YELLOW"> INTERMEDIATE </div>
+<div style="color:YELLOW"> INTERMEDIATE </div> 
 
 ------------------------
 
@@ -77,3 +77,5 @@ https://dribbble.com/vaishakhN/collections/5367457-space
 - Make website clonesss
 - [ ] Apple clone!!
 - [ ] Microsoft clone!!
+
+## Chat Application (or more like a teams system)

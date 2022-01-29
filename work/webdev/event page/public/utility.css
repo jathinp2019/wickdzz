@@ -17,6 +17,8 @@
   --orange: #ff7f3f;
   --pink: #ff5da2;
   --pink: 334, 100%, 68%;
+
+  --mouse: #94daff;
 }
 .uppercase {
   text-transform: uppercase;

@@ -41,7 +41,7 @@ var tl2 = gsap
       //   pin: true,
       start: "top 300",
       end: ".intro-left p ",
-      markers: true,
+      // markers: true,
       scrub: 1,
     },
   })

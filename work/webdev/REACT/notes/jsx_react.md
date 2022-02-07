@@ -207,3 +207,38 @@ Keys don’t do anything that you can see! React uses them internally to keep tr
 
 
 # React.createElement
+You can write React code without using JSX at all!
+
+In React, you won't be using `document.createElement`.
+However, we saw how it works because it shares some similarities with `React.createElement` but it's not the same thing.
+
+- `document.createElement` returns a DOM element (for example a div or an h1). Whereas `React.createElement` returns an object that represents the DOM element.
+The object looks something like this:
+```jsx
+const element = React.createElement("h1");
+//returns an object similar to this one:
+{
+  type: 'h1',
+  props: {}
+}
+```
+  - The reason why React.createElement returns an object rather than the DOM element itself is because React operates a `Virtual DOM`. 
+  - So React.createElement returns an object rather than a DOM element because this allows React to do some performance optimizations (such as the Virtual DOM)
+
+`Note: ` when a JSX element is compiled, it transforms into a `React.createElement()` call.
+
+```jsx
+//Syntax
+React.createElement(type, {props},children)
+
+eg:- 
+let welcome = React.createElement(
+  "h1",
+  { className:"welcome" ,style: { color: "red" } },
+  `Welcome to react world`
+);
+```
+
+`Note:` 
+ the `DOM` is used in React applications, but `it isn’t part of React`. After all, the DOM is also used in countless non-React applications.
+ Methods imported from `react` are only for pure React purposes, such as creating components or writing JSX elements.

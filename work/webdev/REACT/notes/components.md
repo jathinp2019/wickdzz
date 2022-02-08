@@ -52,7 +52,7 @@ Now the `MyComponentClass` is a working component class! It’s ready to follow 
 // (Note: the name should be the name of the class itself)
 ```
 
- Now How do you DIstinguish between `JSX` and `Component` ?
+ Now How do you Distinguish between `JSX` and `Component` ?
   - JSX uses capitalization to distinguish between the two! 
   - `Components` uses capital CamelCasing for naming purpose.
   - Component class names must begin with capital letters. In a JSX element, that capitalized first letter says, “I will be a component instance and not an HTML tag.”
@@ -69,3 +69,81 @@ ReactDOM.render(
 - ReactDOM.render() will tell `<MyComponentClass />` to call its render method.
   - `<MyComponentClass />` will call its render method, which will return the JSX element `<h1>Hello world</h1>`
   - `ReactDOM.render()` will then take that resulting JSX element, and add it to the virtual DOM. This will make “Hello world” appear on the screen.
+
+---
+
+## Advanced JSX and Components
+### Use Multiline JSX in a Component
+- Wrapping JSX element into `()` and using `return` statement n th render function of a component class
+  
+```jsx
+class multilineComponent extends React.Component {
+  render(){
+
+    return (
+      <h1>Heading</h1>
+      <p> this is a para </p>
+      // ...etc
+    )
+
+    ReactDOM.render(
+      <multilineComponent/> ,
+      target
+    )
+
+  }
+}
+```
+
+### Use a Variable Attribute in a Component
+- Using `{}` i.e. `JS injections` inside render function 
+- 
+```jsx 
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+
+const owl = {
+  title: 'Excellent Owl',
+  src: 'sm-src-here'
+};
+
+// Component class starts here:
+
+class Owl extends React.Component {
+  render() {
+    return (
+      <div> 
+        <h1>{owl.title} </h1>
+        <img src = {owl.src} alt = {owl.title} />
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<Owl />,document.getElementById('app')  )
+```
+
+### Put Logic in a Render Function
+- Login cfunctions can be added inside `render(){}`
+```jsx
+class Random extends React.Component {
+  render() {
+    const n = Math.floor(Math.random() * 10 + 1);
+    return <h1>The number is {n}!</h1>;
+  }
+}
+```
+
+`Note:` The func. or calc should be inside `render` only!!!
+The following eg. is incorrect
+```jsx 
+class Random extends React.Component {
+  // This should be in the render function:
+  const n = Math.floor(Math.random() * 10 + 1);
+ 
+  render() {
+    return <h1>The number is {n}!</h1>;
+  }
+};
+```

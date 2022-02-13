@@ -10,6 +10,8 @@ The create-react-app will set up everything you need to run a React application.
 ## Editing
 - first-react-app\src\App.js is the file where all the initial code is set up
 
+- editing `index.js`
+
 ## JSX (Javascript Syntax eXtension)
 - JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.
 - In this case, it means that JSX is not valid JavaScript. Web browsers can’t read it! It needs to be compiled before it reaches the web browser
@@ -61,7 +63,7 @@ const paragraphs = (
 Check <a href="notes\jsx_react.md">RENDERING</a> in React
 
 ## ClassName 
-I React we use `className` , just `class` in html
+In React we use `className` , just like  `class` in html
 
 ```jsx
 //In HTML 
@@ -86,7 +88,7 @@ When you write a self-closing tag in HTML, it is optional to include a forward-s
 <br>  <br/>
 ```
 
-But in REACT, self closing tags MUST end with `\`
+But in REACT, self closing tags MUST end with `/`
 ```js
 Fine in JSX:
 <br />
@@ -242,3 +244,9 @@ let welcome = React.createElement(
 `Note:` 
  the `DOM` is used in React applications, but `it isn’t part of React`. After all, the DOM is also used in countless non-React applications.
  Methods imported from `react` are only for pure React purposes, such as creating components or writing JSX elements.
+
+---
+# Component Interaction
+- A React application can contain dozens, or even hundreds, of components.
+- Each component might be small and relatively unremarkable on its own. When combined, however, they can form enormous, fantastically complex ecosystems of information.
+- In other words, React apps are made out of components, but what makes React special isn’t components themselves. What makes React special is the ways in which components interact.

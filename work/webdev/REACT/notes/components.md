@@ -97,7 +97,7 @@ class multilineComponent extends React.Component {
 
 ### Use a Variable Attribute in a Component
 - Using `{}` i.e. `JS injections` inside render function 
-- 
+  
 ```jsx 
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -135,7 +135,7 @@ class Random extends React.Component {
 }
 ```
 
-`Note:` The func. or calc should be inside `render` only!!!
+`Note:` The func. or calc. should be inside `render` only!!!
 The following eg. is incorrect
 ```jsx 
 class Random extends React.Component {
@@ -146,4 +146,67 @@ class Random extends React.Component {
     return <h1>The number is {n}!</h1>;
   }
 };
+```
+
+### Conditionals in Components 
+- inside the render function, but before the return statement
+```jsx
+  import React from 'react';
+import ReactDOM from 'react-dom';
+
+const fiftyFifty = Math.random() < 0.5;
+
+// New component class starts here:
+
+class TonightsPlan extends React.Component {
+  render(){
+    if(fiftyFifty){
+      return <h1>Tonight I'm going out WOOO</h1>
+    }
+    else return <h1>Tonight I'm going to bed WOOO</h1>
+  }
+}
+
+//then render the component 
+);
+```
+
+### this keyword
+- used to refer to an instance it is being called by.
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyName extends React.Component {
+
+get name(){ //getter function
+  return 'whatever-your-name-is-goes-here'
+}
+
+  render() {
+    return <h1> My name is {this.name} </h1>;
+  }
+}
+
+ReactDOM.render(<MyName />, document.getElementById('app'));  
+```
+
+### Event Listener in Component
+- same as evntListeners using external functions and `this`
+  
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Button extends React.Component {
+  scream() {
+    alert('AAAAAAAAHHH!!!!!');
+  }
+
+  render() {
+    return <button onClick = {this.scream} >AAAAAH!</button>;
+  }
+}
+
+ReactDOM.render( <Button />, document.getElementById('app'))
 ```

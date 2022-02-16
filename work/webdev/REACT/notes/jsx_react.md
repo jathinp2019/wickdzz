@@ -245,8 +245,3 @@ let welcome = React.createElement(
  the `DOM` is used in React applications, but `it isn’t part of React`. After all, the DOM is also used in countless non-React applications.
  Methods imported from `react` are only for pure React purposes, such as creating components or writing JSX elements.
 
----
-# Component Interaction
-- A React application can contain dozens, or even hundreds, of components.
-- Each component might be small and relatively unremarkable on its own. When combined, however, they can form enormous, fantastically complex ecosystems of information.
-- In other words, React apps are made out of components, but what makes React special isn’t components themselves. What makes React special is the ways in which components interact.

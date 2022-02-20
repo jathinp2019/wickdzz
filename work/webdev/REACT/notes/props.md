@@ -90,7 +90,7 @@ ReactDOM.render(<App />,target)
 ```
 
 ## Decision Making using props
-- Props are also used in ecison making and deciding what to be renderd according to the condition
+- Props are also used in decison making and deciding what to be renderd according to the condition
 - the prop however isn't shown in the UI, but then just used for decision making
 ```jsx
 // Greeting.js

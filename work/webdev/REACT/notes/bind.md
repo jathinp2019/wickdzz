@@ -48,11 +48,31 @@ class MyComponent extends React.Component{
   render() {
     // function callback with () DOES NOT need `binding`
     return (
-      <button onClick={() => this.handleClick}>
+      <button onClick={() => this.changing}>
       Click Me! 
       </button>
     );
   }
 }
+```
+
+`Note:` if any argument is also being passed, then bind it with the method name alsooo :
+```jsx
+this.methodName = this.methodName.bind(this,arg)
+```
+
+### Setting Multiple States
+Yes , we can set multiple properties using `this.setState`
+
+```jsx
+/* Given this state */
+this.state = {
+  key1: value1,
+  key2: value2,
+  key3: value3
+}
+
+/* We could use code like the following to update specific properties */
+this.setState({ key1: newValue1, key3: newValue3 });
 ```
 

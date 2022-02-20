@@ -210,3 +210,21 @@ class Button extends React.Component {
 
 ReactDOM.render( <Button />, document.getElementById('app'))
 ```
+
+# Components using functions :
+- Nowadays the class implementation is rather not used as the function implementaion makes it easier for us!
+
+```jsx
+function MyComponent() {
+  return (
+      <div>
+      <ul>
+        <li>thing1</li>
+        <li>thing2</li>
+      </ul>
+      </div>
+  )
+}
+
+ReactDOM.render(<MyComponent />,document.getElementById('root'))
+```

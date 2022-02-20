@@ -40,14 +40,14 @@ const p1 = <p id="large">foo</p>
 ```
 ### Note: A jsx element can have "only  1 " outer element
 i.e
-this is an invalid code... as it has more than 2 parent elements
+this is an `invalid code`... as it has more than 2 parent elements
 ```JSX
 const paragraphs = (
   <p id="child1">I am a paragraph.</p> 
   <p id="child2">I, too, am a paragraph.</p>
 );
 ```
-BUT, this code is valid as it has only 1 parent and 2 child
+BUT, this code is `valid` as it has only 1 parent and 2 child
 
 ```JSX
 const paragraphs = (

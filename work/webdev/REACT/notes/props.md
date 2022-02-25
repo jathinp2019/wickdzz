@@ -29,7 +29,8 @@ class cl2 extends React.Component {
 - Every component has something called `props.`
   - A component’s props is an object. It holds information about that component.
   - To see a component’s props object, you use the expression `this.props`
-
+- These should be `immutable` nor they should be changed in the body of a function
+  
 ```jsx
 render(){
     <h1>Props here </h1>

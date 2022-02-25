@@ -127,3 +127,63 @@ Think of this.setState() as actually being two things: this.setState(), immediat
 
 # Props vs State
 <img src="capture.jpg">
+
+# Using States correctly
+3 important things to keep in mind
+
+### Don not update the state directly
+this is wrong
+```jsx
+this.state.smstate = smvalue
+```
+instead use `setState()`
+```jsx
+this.setState({smstate = smvalue})
+```
+`Note:` The only place where you can assign `this.state` is the `constructor`.
+
+### State update maybe Asynchronous!
+- Do not depend on the previous values of state because `this.state` and `this.props` may be `update asynchronously`
+  
+- React may `batch multiple setState()` calls into a `single update` for performance.
+
+```jsx
+// this is wrong
+this.setState({
+  counter : this.state.counter + this.props.increment
+})
+```
+- For this we need to use a different version of setState
+
+```jsx
+this.setState((state,props)=> 
+  ({
+    counter : this.state.counter + this.props.increment
+  })
+)
+
+//OR
+// just like a normal function
+
+function fn (state , props){
+  return {
+    counter : state.counter + props.increment
+  }
+}
+```
+
+## State updates are merged
+- React merges objects for perfomance when we use setState()
+
+```jsx
+constructor(props){
+  super(props)
+  this.state = {
+    state1 : [],
+    state2 : []
+  }
+}
+
+//react merges these
+```
+But we can update them independently by using setState()

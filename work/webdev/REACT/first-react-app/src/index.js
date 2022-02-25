@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import "./style.css"; // importing css
 
-ReactDOM.render(<h1> Hello World </h1>, document.getElementById("root"));
+function Header() {
+  return <div className="header">Heading</div>;
+}
+ReactDOM.render(<Header />, document.getElementById("root"));

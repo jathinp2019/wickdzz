@@ -154,7 +154,7 @@ Create an event listener by giving a JSX element a special attribute. Here’s a
 `onClick` in JSX
 ```
 
-## Conditonals in JSX
+## Conditionals in JSX
 - `If` statements cannot be injected in JSX
 ```jsx
 // @ this is invalid

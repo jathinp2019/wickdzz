@@ -125,6 +125,21 @@ Think of this.setState() as actually being two things: this.setState(), immediat
 - That is why `you can’t call this.setState() from inside of the .render() method!`.
 - this.setState() automatically calls .render(). `If .render() calls this.setState(), then an infinite loop is created.`
 
+### Setting Multiple States
+Yes , we can set multiple properties using `this.setState`
+
+```jsx
+/* Given this state */
+this.state = {
+  key1: value1,
+  key2: value2,
+  key3: value3
+}
+
+/* We could use code like the following to update specific properties */
+this.setState({ key1: newValue1, key3: newValue3 });
+```
+
 # Props vs State
 <img src="capture.jpg">
 

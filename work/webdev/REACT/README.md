@@ -6,3 +6,4 @@
 - <a href="notes\props.md">Props</a>
 - <a href="notes\states.md">States</a>
 - <a href="notes\lifecycleMethods.md">Life Cycle Methods</a>
+- <a href="notes\hooks.md">Life Cycle Methods</a>

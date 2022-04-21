@@ -1,6 +1,6 @@
 - In real simple words:
   
-whenever you define an `event handler that uses this`, you need to `add this.methodName = this.methodName.bind(this) to your constructor function`
+whenever you define an `event handler that uses 'this'`, you need to `add this.methodName = this.methodName.bind(this) to your constructor function`
 
 ```jsx
 class MyComponent extends React.Component{
@@ -20,7 +20,7 @@ class MyComponent extends React.Component{
   render() {
       // function callback without () NEEDS `binding`
     return (
-      <button onClick={this.handleClick}>
+      <button onClick={this.changing}>
       Click Me! 
       </button>
     );
@@ -28,9 +28,9 @@ class MyComponent extends React.Component{
 }
 ```
 `Reason:`
-- Generally, if you refer to a `method without ()` after it, such as onClick={this.handleClick}, you should `bind` that method.
+- Generally, if you refer to a `method without ()` after it, such as onClick={this.changing}, you should `bind` that method.
 - We have to be careful about `this` in javascript. Class method is `not bound by default`
--  If you `forget to bind this.handleClick` and pass it to onClick, this will be `undefined` when the function is actually called.
+-  If you `forget to bind this.changing` and pass it to onClick, this will be `undefined` when the function is actually called.
 - It helps in enhancing the performance problem 
 
 ```jsx

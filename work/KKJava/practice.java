@@ -1,83 +1,114 @@
 import java.util.*;
 
-// import arrays.arr;
-
 public class practice {
 
     public static void main(String[] args) {
-        int[] a = { 10, 5, 2, 4 };
-        a = mergeSort(a);
-        // a = mergeSort(a, 0, a.length);
+        // System.out.println("Ll: ");
+        // LL l = new LL();
+        // l.addNode(4);
+        // l.addNode(5);
+        // l.addNode(6);
+        // l.addNode(7);
+        // l.addNode(1);
 
-        System.out.println(Arrays.toString(a));
-    }
+        // l.peek();
 
-    // static int[] mergeSort(int[] arr, int p, int q) {
+        System.out.println("Queues");
 
-    // if (arr.length == 1)
-    // return arr;
+        Queues_impl q = new Queues_impl();
+        q.enqueue(4);
+        q.enqueue(5);
+        q.enqueue(6);
+        q.enqueue(8);
 
-    // if (p > q)
-    // return arr;
-    // // mid = (p + q) / 2;
+        q.peek();
 
-    // int mid = (p + q) / 2;
+        q.dequeue();
+        q.dequeue();
 
-    // int[] a1 = mergeSort(arr, p, mid);
-    // int[] a2 = mergeSort(arr, mid, q);
+        q.peek();
 
-    // return merge(a1, a2);
-    // // return arr;
-
-    // }
-    static int[] mergeSort(int[] arr) {
-
-        if (arr.length == 1)
-            return arr;
-
-        int mid = arr.length / 2;
-
-        int[] a1 = mergeSort(Arrays.copyOfRange(arr, 0, mid));
-        int[] a2 = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));
-
-        return merge(a1, a2);
-        // return arr;
+        System.out.println("Stack");
 
     }
+}
 
-    static int[] merge(int[] a1, int[] a2) {
-        int[] result = new int[a1.length + a2.length];
+class Node {
 
-        int i = 0, j = 0, k = 0;
+    int data;
+    Node next;
 
-        while (i < a1.length && j < a2.length) {
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
 
-            if (a1[i] > a2[j]) {
-                result[k] = a2[j];
-                j++;
-            } else {
-                // if (a1[i] < a2[j]) {
-                result[k] = a1[i];
-                i++;
-            }
+class LL {
 
-            k++;
+    Node head = null;
+    Node tail = null;
+
+    void addNode(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null && tail == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+    }
+
+    void peek() {
+        Node current = head;
+
+        while (current != null) {
+            System.out.println(current.data + " ");
+            current = current.next;
+        }
+    }
+}
+
+class Queues_impl {
+    Node front = null;
+    Node rear = null;
+
+    boolean isEmpty() {
+        if (front == null && rear == null) {
+            return true;
+        }
+        return false;
+    }
+
+    void enqueue(int data) {
+        Node newNode = new Node(data);
+
+        if (isEmpty()) {
+            front = rear = newNode;
+        } else {
+            rear.next = newNode;
         }
 
-        while (i < a1.length) {
-            result[k] = a1[i];
-            // System.out.println(result.length);
-            i++;
-            k++;
-        }
+        rear = newNode;
+    }
 
-        while (j < a2.length) {
-            result[k] = a1[j];
-            j++;
-            k++;
+    void dequeue() {
+        System.out.println(" ");
+        if (isEmpty()) {
+            System.out.println("not possible");
+        } else {
+            front = front.next;
         }
-        // System.out.println(k);
+    }
 
-        return result;
+    void peek() {
+        Node current = front;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println(" ");
+
     }
 }

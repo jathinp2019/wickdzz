@@ -52,3 +52,154 @@ function Toggle() {
 ```
 - Notice how the state setter function, setToggle(), is called by our onClick event listeners. To update the value of toggle and re-render this component with the new value, all we need to do is call the setToggle() function with the next state value as an argument.
 - If using classes, we had to take care of binding , constructors ,etc... Hooks makes it easier as all these steps need not be taken care of!!
+
+eg: Counter 
+
+```jsx
+import { useState } from "react";
+
+function App() {
+  var [count, setCount] = useState(0);
+  //initial state = 0
+    
+  //setCount(value) sets the value of count as we cannot directly change the value of state but use setState()!!
+
+  return (
+    <>
+      <button onClick={() => setCount(++count)}>+</button>
+
+      <div>{count}</div>
+
+      <button onClick={() => setCount(--count)}>-</button>
+    </>
+  );
+}
+```
+
+### Set from Previous state:
+- The next values of a state is most oftenly based on its previous value, so as a best practice it is recommended to use previous values of state while calculations
+  
+```jsx
+import React,{useState} from 'react'
+import ReactDOM from 'react-dom'
+
+function App() {
+
+var [count,setCount] = useState(0);
+
+
+  return (
+    <>
+
+      <button onClick={() => setCount((prevCount)=> {
+        prevCount = prevCount +1;
+      })}>
+      +
+      </button>
+
+      <div>{count}</div>
+
+      <button onClick={() => setCount((prevCount)=> {
+        prevCount = prevCount -1;
+      })}>
+      -
+      </button>
+
+    </>
+  );
+}
+
+ReactDOM.render(<App/> , target);
+```
+
+### Arrays in State 
+-  including `Array` as State:  
+
+```jsx
+import React, { useState } from "react";
+import ItemList from "./ItemList";
+import { produce, pantryItems } from "./storeItems";
+
+export default function GroceryCart() {
+  // declare and initialize state 
+const [cart,setCart] = useState([]);
+// setting cart as an empty array and a callback state setter function
+
+  const addItem = (item) => {
+    // returning item + pre elements of the array
+    setCart((prev)=> {
+      return [item, ...prev];
+    });
+
+  };
+
+  const removeItem = (targetIndex) => {
+
+    setCart((prev)=> {
+        return prev.filter((t,index) => index !==(targetIndex))
+    })
+
+  };
+
+  return (
+    <div>
+      <h1>Grocery Cart</h1>
+      <ul>
+        {cart.map((item, index) => (
+          <li onClick={() => removeItem(index)} key={index}>
+            {item}
+          </li>
+        ))}
+      </ul>
+      <h2>Produce</h2>
+      <ItemList items={produce} onItemClick={addItem} />
+      <h2>Pantry Items</h2>
+      <ItemList items={pantryItems} onItemClick={addItem} />
+    </div>
+  );
+}
+
+```
+
+### Objects in States:
+- including `Objects` as States:
+
+```jsx
+function Login() {
+  // setting an empty object and statesetter callback
+  const [formState, setFormState] = useState({});
+ 
+  const handleChange = ({ target }) => {
+    
+    const { name, value } = target;
+
+    // remember to always try changing values wrt previous values!!
+    setFormState((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+
+  };
+ 
+  return (
+    <form>
+      <input
+        value={formState.firstName}
+        onChange={handleChange}
+        name="firstName"
+        type="text"
+      />
+      <input
+        value={formState.password}
+        onChange={handleChange}
+        type="password"
+        name="password"
+      />
+    </form>
+  );
+}
+```
+
+---
+
+## useEffect()
